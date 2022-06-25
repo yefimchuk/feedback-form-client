@@ -4,11 +4,13 @@ import {CreateMessageBodyTypes} from "../types/serviceTypes";
 class FeedbackService {
 
     async fetchMessages() {
-        return (await axios.get('http://localhost:4000/feedback')).data;
+
+        return axios.get("https://zenbit-feedback-db.herokuapp.com/feedback");
     }
 
-    async createMessage(data: CreateMessageBodyTypes ) {
-        return (await axios.post('http://localhost:4000/feedback', data)).data;
+    async createMessage(values: CreateMessageBodyTypes) {
+
+        return axios.post('https://zenbit-feedback-db.herokuapp.com/feedback', values);
     }
 }
 

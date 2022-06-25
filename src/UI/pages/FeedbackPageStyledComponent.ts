@@ -3,10 +3,10 @@ import styled from "styled-components";
 
 export const FeedbackFormPageBox = styled.div`
   width: 50%;
-  @media ${(props: { theme: { media: { tablet: any; }; }; }) => props.theme.media.tablet} {
+  @media (max-width: 1040px) and (min-width: 576px) {
     width: 100%;
   }
-  @media ${(props: { theme: { media: { phone: any; }; }; }) => props.theme.media.phone} {
+  @media ${props => props.theme.mobileL} {
     width: 95%;
     margin: 0px auto;
   }

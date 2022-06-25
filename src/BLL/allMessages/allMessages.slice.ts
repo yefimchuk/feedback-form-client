@@ -1,10 +1,11 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import feedbackServiceInstance from "../../DAL/feedbackService";
 
 export const fetchMessages: any = createAsyncThunk(
         'allMessages/fetchMessages',
-        async (data, {rejectWithValue}) => {
+        async ({}, {rejectWithValue}) => {
             try {
-
+                return await feedbackServiceInstance.fetchMessages()
             } catch (err) {
                 return rejectWithValue(err)
             }
@@ -25,11 +26,13 @@ export const allMessages = createSlice({
             state.isLoading = true;
         },
         [fetchMessages.fulfilled]: (state, action) => {
-            state.dataMessages = action.payload
+            state.dataMessages = action.payload.data
+
             state.isLoading = false;
         },
         [fetchMessages.rejected]: (state, action) => {
-            state.errors = action.payload.data
+
+            state.errors = action.payload
             state.isLoading = false;
         },
     },

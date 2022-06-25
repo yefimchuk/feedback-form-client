@@ -4,9 +4,9 @@ import {CreateMessageBodyTypes} from "../../types/serviceTypes";
 
 export const createMessageThunk: any = createAsyncThunk(
         'createMessage/createMessageThunk',
-        async (data: CreateMessageBodyTypes, {rejectWithValue}) => {
+        async (values: CreateMessageBodyTypes, {rejectWithValue}) => {
             try {
-                return async () => await feedbackServiceInstance.createMessage(data)
+                return await feedbackServiceInstance.createMessage(values)
             } catch (err) {
                 return rejectWithValue(err)
             }
@@ -26,6 +26,7 @@ export const createMessage = createSlice({
             state.isPosting = true;
         },
         [createMessageThunk.fulfilled]: (state) => {
+
             state.isPosting = false;
         },
         [createMessageThunk.rejected]: (state, action) => {

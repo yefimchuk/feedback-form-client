@@ -3,24 +3,27 @@ import './App.css';
 import {useDispatch, useSelector} from "react-redux";
 import {selectAllMessages} from "./BLL/allMessages/allMessages.selector";
 import {fetchMessages} from "./BLL/allMessages/allMessages.slice";
-import {AppWrapper, FlexBox} from "./AppStyledComponent";
-
+import {AppWrapper, FlexRow} from "./AppStyledComponent";
+import Footer from "./UI/components/Footer/Footer";
+import Decor from "./UI/components/Decoration/Decoration";
+import FeedbackFormPage from "./UI/pages/FeedbackPage";
+import background from "../src/assets/back.jpg";
 function App() {
     const dispatch = useDispatch();
-    const {dataMessages, errors} = useSelector(selectAllMessages);
-debugger
+    const {dataMessages} = useSelector(selectAllMessages);
     useEffect(() => {
-        dispatch(fetchMessages());
+        dispatch(fetchMessages({}));
     }, []);
 
     console.log('messagesData', dataMessages);
 
     return (
-        <AppWrapper >
-            <FlexBox>
-
-            </FlexBox>
-
+        <AppWrapper background={background}>
+            <FlexRow>
+                <FeedbackFormPage/>
+                <Decor />
+            </FlexRow>
+            <Footer/>
         </AppWrapper>
     );
 }

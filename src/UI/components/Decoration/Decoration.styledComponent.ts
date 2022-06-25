@@ -1,18 +1,18 @@
 //todo decor.styledComponent.ts ==> it's correct?
 import styled from "styled-components";
 
-export const DecorBox = styled.div`
+export const DecorationContainer = styled.div`
   width: 50%;
   
-  @media ${props => props.theme.media.tablet} {
+  @media (max-width: 1040px) and (min-width: 576px) {
     display: none;
   }
-  @media ${props => props.theme.media.phone} {
+  @media ${props => props.theme.mobileL} {
     display: none;
   }
 `;
 
-export const ImageDecor = styled.img`
+export const DecorationImage = styled.img`
   width: 75%;
   height: 100%;
   object-position: right;
