@@ -1,14 +1,14 @@
 body {
-  font-family: 'Apercu Arabic Pro';
+  font-family: "Apercu Arabic Pro";
 }
 @font-face {
-  font-family: 'Apercu Arabic Pro';
-  src: local('Apercu Arabic Pro'),
-  url('./font/ApercuArabicPro-Medium.ttf') format('truetype');
+  font-family: "Apercu Arabic Pro";
+  src: local("Apercu Arabic Pro"),
+    url("./font/ApercuArabicPro-Medium.ttf") format("truetype");
   font-weight: 500;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

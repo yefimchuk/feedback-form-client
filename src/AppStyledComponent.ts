@@ -10,7 +10,6 @@ export const AppWrapper: any = styled.div`
   margin: 0px auto;
   background-size: cover;
   background-image: url(${(props: any) => props.background});
-
 `;
 
 export const FlexRow = styled.div`

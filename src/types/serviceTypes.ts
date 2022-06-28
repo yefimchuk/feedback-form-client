@@ -1,5 +1,5 @@
 export interface CreateMessageBodyTypes {
-    name: string,
-    email: string,
-    messages: string
+  name: string;
+  email: string;
+  messages: string;
 }

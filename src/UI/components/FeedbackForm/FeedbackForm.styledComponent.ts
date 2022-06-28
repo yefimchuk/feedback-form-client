@@ -2,20 +2,20 @@ import styled from "styled-components";
 
 export const FormWrapper = styled.div`
   display: flex;
- 
+
   flex-direction: column;
   margin: 0px auto;
   width: 80%;
-  @media ${props => props.theme.mobileL} {
+  @media ${(props) => props.theme.mobileL} {
     width: 100%;
   }
 `;
 
 export const Input = styled.input`
   background-color: white;
-  font-family: 'Apercu Arabic Pro',serif;
+  font-family: "Apercu Arabic Pro", serif;
   font-size: 18px;
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
   height: 90px;
   border-radius: 10px;
   margin: 8px 0px;
@@ -30,10 +30,10 @@ export const Input = styled.input`
 export const TextArea = styled.textarea`
   background-color: white;
   margin: 8px 0px;
-  font-family: 'Apercu Arabic Pro',serif;
+  font-family: "Apercu Arabic Pro", serif;
   font-size: 18px;
 
-  border: 1px solid #DCDCDC;
+  border: 1px solid #dcdcdc;
   border-radius: 10px;
   color: black;
   outline: none;
@@ -46,7 +46,7 @@ export const TextArea = styled.textarea`
 `;
 
 export const Button = styled.button`
-  background-color: #FAD34F;
+  background-color: #fad34f;
   color: white;
   border-radius: 100px;
   font-weight: bold;
